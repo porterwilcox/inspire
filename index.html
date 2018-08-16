@@ -2,31 +2,38 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Inspire</title>
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 </head>
 
-<body id="body">
-	<div id="weather">
-		Your Weather Template
-	</div>
+<body class="container-fluid">
+	<button class="btn-primary btn-left" type="button" data-toggle="collapse" data-target=".show-left">Collapsey</button>
+		<div class="row">
+			<div class="col-sm-3 pos collapse show-left">
+				<div class="weather">
+					Your Weather Template
+				</div>
 
-	<div id="quote">
-		The Quote
-	</div>
+				<div id="quote">
+					The Quote
+				</div>
 
-	<div id="todo">
-		<form onsubmit=""></form>
-		A Todo List
-	</div>
+				<div id="todo">
+					<form onsubmit=""></form>
+					A Todo List
+				</div>
+			</div>
+			<!-- <h1 id="first-neighbor" class="col-sm-3 offset-sm-3">Hello World</h1> -->
+			<h1 class="hello">hello world</h1>
+		</div>
 
-
-
-
-	<!--JS Libraries-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-	<!--Initialize App-->
-
 	<script type='module' src="app/main.js"></script>
 </body>
 

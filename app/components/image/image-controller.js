@@ -1,8 +1,17 @@
-//Your ImageService is a global class what can you do here to instantiate it?
+import ImageService from "./image-service.js";
 
 
+let imageService = new ImageService
+let date = new Date
+let index
 export default class ImageController {
+    constructor(){
+        imageService.getImage(drawImage)
+    }
+}
 
-
+function drawImage(imageArr) {
+    index = date.getDate() - 1
+    document.body.style.backgroundImage = `url(${imageArr[index].url})`
 }
 
