@@ -15,7 +15,6 @@ export default class ImageService {
 		imgApi.get(`search?query=forest`)
 			.then(res => {
 				callback(res.data.images)
-				localStorage.setItem('image', res.data.images[15].url)
 			})
 	}
 }

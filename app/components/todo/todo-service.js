@@ -1,7 +1,8 @@
 
+let yourName = localStorage.getItem("name")
 
 const todoApi = axios.create({
-	baseURL: 'https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos/',
+	baseURL: `https://bcw-sandbox.herokuapp.com/api/${yourName}/todos/`,
 	timeout: 3000
 });
 
@@ -13,23 +14,22 @@ function logError(e) {
 let todoList = []
 
 export default class TodoService {
+	constructor(){
 
+	}
 	getTodos(draw) {
-		console.log("Getting the Todo List")
 		todoApi.get('')
-			.then((res) => { // <-- WHY IS THIS IMPORTANT????
-
+			.then((res) => {
+				draw(res.data.data)
 			})
 			.catch(logError)
 	}
 
-	addTodo(todo) {
-		// WHAT IS THIS FOR???
-		todoApi.post('', todo)
-			.then(function (res) { // <-- WHAT DO YOU DO AFTER CREATING A NEW TODO?
-
-			})
-			.catch(logError)
+	addTodo(todo, callback) {
+		todoApi.post('', {
+			description: todo
+		})
+			.then(callback)
 	}
 
 	toggleTodoStatus(todoId) {
@@ -46,9 +46,9 @@ export default class TodoService {
 			.catch(logError)
 	}
 
-	removeTodo() {
-		// Umm this one is on you to write.... The method is a DELETE
-
+	removeTodo(id, callback) {
+		todoApi.delete(id)
+			.then(callback)
 	}
 
 }

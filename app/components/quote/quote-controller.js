@@ -1,16 +1,21 @@
 import QuoteService from "./quote-service.js";
 
-let qs = new QuoteService
+let quoteService = new QuoteService
 
 
 export default class QuoteController {
 	constructor() {
-		this.getQuote()
+		quoteService.getQuote(drawQuote)
 	}
+}
 
-	getQuote() {
-		qs.getQuote(function (quote) {
-			console.log('What is the quote', quote)
-		})
-	}
+function drawQuote(quote){	
+	let template = `
+	<div>
+		<p class="quote-text">${quote.quote}</p>
+		<br>
+		<p class="quote-author">-${quote.author}</p>
+	</div>
+	`
+	document.querySelector(".quote").innerHTML = template
 }
