@@ -8,6 +8,7 @@ export default class GreetingController {
     }
     saveName(e) {
         greetingService.saveName(e.target.value)
+        window.location.reload()
     }
 }
 
