@@ -5,10 +5,10 @@ body {
     position: absolute;
     z-index: 1;
 }
-.pos {
+.pannel-content-pos {
     display: flex;
     flex-flow: wrap column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     height: 100vh;
     background-color: rgb(128, 128, 128, .8)
@@ -57,8 +57,9 @@ body {
     display: flex;
     flex-flow: wrap row;
     justify-content: space-evenly;
-    max-width: 25vw;
     z-index: 1;
+    color: white;
+    opacity: .9;
 }
 span {
     font-size: 2rem;
@@ -68,7 +69,7 @@ span {
     font-size: 3rem;
 }
 .weather-city, .weather-city:active, .weather-city:focus {
-    width: 20vw;
+    width: 25vw;
     color: white;
     text-shadow: 0 0 5px black;
     font-size: 2rem;    
@@ -79,3 +80,132 @@ span {
     outline: none;
     font-size: 2.3rem;
 }
+.weather-city::placeholder {
+    color: white;
+    text-shadow: 0 0 5px black;  
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    font-size: 2.3rem;
+}
+.weather-title {
+    font-size: 2rem;
+    text-align: center;
+}
+.weather-row {
+    display: flex;
+    flex-flow: wrap row;
+}
+.w-item {
+    font-size: 1.5rem;
+    width: 50%;
+    text-align: center;
+}
+.w-low {
+    background-color: lightblue;
+}
+.w-high {
+    background-color: lightcoral
+}
+.humidity {
+    background-color: #6a7f91;
+    text-align: center;
+}
+.quote-body {
+    background-color: white;
+}
+.quote-text {
+    font-family: 'Marck Script', cursive;
+}
+/* toggle icon css, thanks transformicons.com */
+.tcon {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 40px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 40px;
+    background: transparent;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent; }
+    .tcon > * {
+      display: block; }
+    .tcon:hover, .tcon:focus {
+      outline: none; }
+    .tcon::-moz-focus-inner {
+      border: 0; }
+  
+  .tcon-menu__lines {
+    display: inline-block;
+    height: 5.71429px;
+    width: 40px;
+    border-radius: 2.85714px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    background: rgb(231, 231, 231);
+    position: relative; }
+    .tcon-menu__lines::before, .tcon-menu__lines::after {
+      display: inline-block;
+      height: 5.71429px;
+      width: 40px;
+      border-radius: 2.85714px;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      background: rgb(231, 231, 231);
+      content: '';
+      position: absolute;
+      left: 0;
+      -webkit-transform-origin: 2.85714px center;
+      transform-origin: 2.85714px center;
+      width: 100%; }
+    .tcon-menu__lines::before {
+      top: 10px; }
+    .tcon-menu__lines::after {
+      top: -10px; }
+    .tcon-transform .tcon-menu__lines {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8);
+      transform: scale3d(0.8, 0.8, 0.8); }
+  
+  .tcon-menu--minus {
+    width: auto; }
+    .tcon-menu--minus.tcon-transform .tcon-menu__lines::before, .tcon-menu--minus.tcon-transform .tcon-menu__lines::after {
+      -webkit-transform: none;
+      transform: none;
+      top: 0;
+      width: 40px; }
+  
+  .tcon-visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+    .tcon-visuallyhidden:active, .tcon-visuallyhidden:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto; }
+  

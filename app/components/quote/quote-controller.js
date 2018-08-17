@@ -9,12 +9,23 @@ export default class QuoteController {
 	}
 }
 
-function drawQuote(quote){	
+function drawQuote(quote) {
 	let template = `
-	<div>
-		<p class="quote-text">${quote.quote}</p>
-		<br>
-		<p class="quote-author">-${quote.author}</p>
+	<div class="accordion quote-accordion">
+	<div class="card bg-secondary">
+		<div class="card-header quote-header">
+			<h6 class="mb-0">
+				<button class="btn btn-secondary" type="button" data-toggle="collapse" data-target=".collapse-quote" >
+					${quote.author} once said
+				</button>
+			</h6>
+		</div>
+		<div class="collapse-quote collapse" data-parent=".quote-accordion">
+			<div class="card-body quote-body">
+				<div class="quote-text">"${quote.quote}"</div>
+			</div>
+		</div>
+	</div>
 	</div>
 	`
 	document.querySelector(".quote").innerHTML = template

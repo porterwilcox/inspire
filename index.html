@@ -7,16 +7,22 @@
 	<title>Inspire</title>
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
 </head>
 
 <body class="container-fluid">
 	<div id="my-carousel" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
 		<div class="carousel-item active w-100 h-100">
-			<button class="btn-primary btn-left" type="button" data-toggle="collapse" data-target=".show-left">Collapsey</button>
+			<button class="btn-secondary btn-left tcon tcon-menu--minus" aria-label="toggle menu" type="button" data-toggle="collapse"
+			 data-target=".show-left">
+				<span class="tcon-menu__lines" aria-hidden="true"></span>
+				<span class="tcon-visuallyhidden">toggle menu</span>
+			</button>
 			<div class="row">
-				<div class="col-sm-3 pos collapse show show-left">
+				<div class="col-sm-4 pannel-content-pos collapse show show-left">
 					<div class="weather-column">
-						<input onchange="app.controllers.weatherController.saveCity(event)" class="weather-city" type="text" placeholder="your city" data-toggle="tooltip" data-placement="bottom" title="enter a large city" />
+						<input onchange="app.controllers.weatherController.saveCity(event)" class="weather-city" type="text" placeholder="your city"
+						 data-toggle="tooltip" data-placement="bottom" title="enter a large city" />
 						<div class="weather"></div>
 					</div>
 					<div class="quote"></div>
@@ -24,8 +30,8 @@
 				<!-- <h1 id="first-neighbor" class="col-sm-3 offset-sm-3">Hello World</h1> -->
 				<div class="greeting">
 					<h1 class="hello">hello,</h1>
-					<input onchange="app.controllers.greetingController.saveName(event)" class="my-name" type="name" placeholder="you" autofocus data-toggle="tooltip" data-placement="bottom" title="use your name to save to-do's"
-					/>
+					<input onchange="app.controllers.greetingController.saveName(event)" class="my-name" type="name" placeholder="you" autofocus
+					 data-toggle="tooltip" data-placement="bottom" title="use your name to save to-do's" />
 				</div>
 			</div>
 			<a href="#my-carousel" role="button" data-slide="next" class="carousel-control-next">

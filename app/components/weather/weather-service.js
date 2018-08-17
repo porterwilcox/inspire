@@ -1,3 +1,5 @@
+import Weather from "../../models/weather.js";
+
 let city = localStorage.getItem("city")
 
 const url = '//bcw-getter.herokuapp.com/?url=';
@@ -19,7 +21,29 @@ export default class WeatherService {
 	getWeather(callback) {
 		weatherApi.get('')
 			.then(res => {
-				callback(res.data.main)
+				let fWeather = new Weather(res.data.main)
+				let cWeather = new Weather(res.data.main)
+				let kWeather = new Weather(res.data.main)
+				callback(getFahren(fWeather), getCelsius(cWeather))
 			})
+
 	}
+}
+function getFahren(weather) {
+	let temp = Math.round((9/5) * (weather.temp - 273) +32)
+	let minTemp = Math.round((9/5) * (weather.minTemp - 273) +32)
+	let maxTemp = Math.round((9/5) * (weather.maxTemp - 273) +32)
+	weather.temp = temp
+	weather.minTemp = minTemp
+	weather.maxTemp = maxTemp
+	return weather
+}
+function getCelsius(weather) {
+	let temp = Math.round(weather.temp - 273.15)
+	let minTemp = Math.round(weather.minTemp - 273.15)
+	let maxTemp = Math.round(weather.maxTemp - 273.15)
+	weather.temp = temp
+	weather.minTemp = minTemp
+	weather.maxTemp = maxTemp
+	return weather
 }
