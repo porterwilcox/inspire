@@ -3,10 +3,10 @@
 let time = new Date()
 let hour
 let greetings = {
-    n4n5n6n7n8n9n10n11: "Good Morning,",
+    n5n6n7n8n9n10n11: "Good Morning,",
     n12n13n14n15: "Good Afternoon,",
-    n16n17n18n19n20n21: "Good Evening,",
-    n22n23n24n0n1n2n3: "Go to sleep,"
+    n16n17n18n19n20: "Good Evening,",
+    n21n22n23n24n0n1n2n3n4: "Good Night,"
 }
 
 export default class GreetingService {
