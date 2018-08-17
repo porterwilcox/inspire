@@ -14,9 +14,10 @@
 		<div class="carousel-item active w-100 h-100">
 			<button class="btn-primary btn-left" type="button" data-toggle="collapse" data-target=".show-left">Collapsey</button>
 			<div class="row">
-				<div class="col-sm-3 pos collapse show-left">
-					<div class="weather">
-						Your Weather Template
+				<div class="col-sm-3 pos collapse show show-left">
+					<div class="weather-column">
+						<input onchange="app.controllers.weatherController.saveCity(event)" class="weather-city" type="text" placeholder="your city" data-toggle="tooltip" data-placement="bottom" title="enter a large city" />
+						<div class="weather"></div>
 					</div>
 					<div class="quote"></div>
 				</div>
@@ -51,23 +52,4 @@
 	<script type='module' src="app/main.js"></script>
 </body>
 
-
-<!-- <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-		<span class="carousel-control-next-icon" aria-hidden="true"></span>
-		<span class="sr-only">Next</span>
-	  </a> -->
-
-<!-- </html>
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-	<div class="carousel-inner">
-		<div class="carousel-item active">
-			<img class="d-block w-100" src=".../800x400?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
-		</div>
-		<div class="carousel-item">
-			<img class="d-block w-100" src=".../800x400?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide">
-		</div>
-		<div class="carousel-item">
-			<img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
-		</div>
-	</div>
-</div> -->
+</html>

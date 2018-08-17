@@ -1,5 +1,7 @@
+let city = localStorage.getItem("city")
+
 const url = '//bcw-getter.herokuapp.com/?url=';
-const url2 = 'http://api.openweathermap.org/data/2.5/weather?q=boise&&APPID=bd82255fd0a21fa1238699b9eda2ee35'
+const url2 = `http://api.openweathermap.org/data/2.5/weather?q=${city}&&APPID=bd82255fd0a21fa1238699b9eda2ee35`
 const apiUrl = url + encodeURIComponent(url2);
 
 const weatherApi = axios.create({
@@ -8,14 +10,16 @@ const weatherApi = axios.create({
 });
 
 export default class WeatherService {
-	constructor(){
+	constructor() {
 
 	}
-	getWeather(callWhenDone) {
-		weatherApi().then(function (res) {
-			localStorage.setItem('weather', JSON.stringify(res.data.main.temp))
-			console.log(res.data);
-			console.log(localStorage)
-		})
+	saveCity(city) {
+		localStorage.setItem("city", city)
+	}
+	getWeather(callback) {
+		weatherApi.get('')
+			.then(res => {
+				callback(res.data.main)
+			})
 	}
 }

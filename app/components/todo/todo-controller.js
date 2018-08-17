@@ -19,12 +19,11 @@ function getTodos() {
 
 }
 function draw(todos) {
-	console.log(todos)
 	let template = ''
 	todos.forEach(todo => {
 		if (todos.indexOf(todo) % 2 == 0) {
 			template += `
-		<div class="card bg-primary">
+		<div class="card bg-primary todo-card">
 			<h2 style="text-align: center">${todo.description}</h2>
 			<span onclick="app.controllers.todoController.removeTodo('${todo._id}')" aria-hidden="true">&times;</span>
 		</div>
@@ -32,7 +31,7 @@ function draw(todos) {
 		}
 		else {
 			template += `
-		<div class="card bg-info">
+		<div class="card bg-info todo-card">
 			<h2 style="text-align: center">${todo.description}</h2>
 			<span onclick="app.controllers.todoController.removeTodo('${todo._id}')" aria-hidden="true">&times;</span>
 		</div>

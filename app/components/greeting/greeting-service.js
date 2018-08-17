@@ -15,10 +15,11 @@ export default class GreetingService {
     }
     getGreeting(callback) {
         hour = time.getHours()
-        Object.keys(greetings).forEach(arr => {
-            arr.replace(/n/g, ' ').split(' ')
-            if (arr.includes(hour)) {
-                callback(greetings[arr])
+        let hourStr = hour.toString()
+        Object.keys(greetings).forEach(str => {
+            let arr = str.replace(/n/g, ' ').split(' ')
+            if (arr.includes(hourStr)) {
+                callback(greetings[str])
             }
         })
     }
