@@ -160,7 +160,7 @@ span {
     border-radius: 2.85714px;
     -webkit-transition: 0.3s;
     transition: 0.3s;
-    background: rgb(231, 231, 231);
+    background: white;
     position: relative; }
     .tcon-menu__lines::before, .tcon-menu__lines::after {
       display: inline-block;
@@ -169,7 +169,7 @@ span {
       border-radius: 2.85714px;
       -webkit-transition: 0.3s;
       transition: 0.3s;
-      background: rgb(231, 231, 231);
+      background: white;
       content: '';
       position: absolute;
       left: 0;
@@ -184,13 +184,30 @@ span {
       -webkit-transform: scale3d(0.8, 0.8, 0.8);
       transform: scale3d(0.8, 0.8, 0.8); }
   
-  .tcon-menu--minus {
+  .tcon-menu--xbutterfly {
     width: auto; }
-    .tcon-menu--minus.tcon-transform .tcon-menu__lines::before, .tcon-menu--minus.tcon-transform .tcon-menu__lines::after {
-      -webkit-transform: none;
-      transform: none;
-      top: 0;
-      width: 40px; }
+    .tcon-menu--xbutterfly .tcon-menu__lines::before, .tcon-menu--xbutterfly .tcon-menu__lines::after {
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      -webkit-transition: top .3s .6s ease, -webkit-transform .3s ease;
+      transition: top .3s .6s ease, -webkit-transform .3s ease;
+      transition: top .3s .6s ease, transform .3s ease;
+      transition: top .3s .6s ease, transform .3s ease, -webkit-transform .3s ease; }
+    .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines {
+      background: transparent; }
+      .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::before, .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::after {
+        top: 0;
+        -webkit-transition: top .3s ease, -webkit-transform .3s .5s ease;
+        transition: top .3s ease, -webkit-transform .3s .5s ease;
+        transition: top .3s ease, transform .3s .5s ease;
+        transition: top .3s ease, transform .3s .5s ease, -webkit-transform .3s .5s ease;
+        width: 40px; }
+      .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::before {
+        -webkit-transform: rotate3d(0, 0, 1, 45deg);
+        transform: rotate3d(0, 0, 1, 45deg); }
+      .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::after {
+        -webkit-transform: rotate3d(0, 0, 1, -45deg);
+        transform: rotate3d(0, 0, 1, -45deg); }
   
   .tcon-visuallyhidden {
     border: 0;
