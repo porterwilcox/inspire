@@ -61,9 +61,16 @@ body {
     color: white;
     opacity: .9;
 }
-span {
+.todo-card span {
     font-size: 2rem;
     text-align: end;
+    cursor: pointer;
+}
+.todo-controls {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    width: 95%;
 }
 .todo-badge {
     font-size: 3rem;
