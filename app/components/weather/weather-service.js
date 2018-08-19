@@ -1,4 +1,4 @@
-import Weather from "../../models/Weather.js";
+import Weather from "../../models/weather.js"
 
 let city = localStorage.getItem("city")
 

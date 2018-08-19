@@ -1,5 +1,3 @@
-import Todo from "../../models/Todo.js";
-
 let yourName = localStorage.getItem("name")
 
 const todoApi = axios.create({
