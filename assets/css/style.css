@@ -3,7 +3,7 @@ body {
 }
 .btn-left {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
 }
 .pannel-content-pos {
     display: flex;
@@ -232,4 +232,23 @@ body {
       overflow: visible;
       position: static;
       width: auto; }
-  
+      @media (pointer: coarse) and (hover: none) {
+        .greeting {
+            top: 25%;
+            left: 20%
+        }
+        .pannel-content-pos {
+            background-color: rgb(128, 128, 128, .8);
+            z-index: 1;
+        }
+      .todo, .todo:active, .todo:focus, .todo::placeholder {
+          top: 85%;
+          z-index: 2;
+        }
+        .weather {
+            width: 90vw;
+        }
+        .weather-city, .weather-city:active, .weather-city:focus {
+            width: 90vw;
+        }
+      }
