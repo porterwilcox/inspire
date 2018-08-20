@@ -125,6 +125,24 @@ body {
 .quote-text {
     font-family: 'Marck Script', cursive;
 }
+.news-frame {
+    height: 45vh;
+    width: 90vw;
+    margin-left: 5vw;
+    border: none;
+}
+.news-articles {
+    height: 55vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-evenly;
+}
+.news-card {
+    height: fit-content;
+    width: 30vw;
+    z-index: 2;
+}
 /* toggle icon css, thanks transformicons.com */
 .tcon {
     -webkit-appearance: none;
