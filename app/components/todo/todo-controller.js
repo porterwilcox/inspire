@@ -41,7 +41,7 @@ function draw(todos) {
 			<div class="card bg-dark todo-card">
 				<h2 style="text-align: center"><s>${todo.description}</s></h2>
 				<div class="todo-controls">
-					<button class="btn btn-secondary" onclick="app.controllers.todoController.toggleTodo('${todo._id}')">done</button>
+					<button class="btn btn-secondary" onclick="app.controllers.todoController.toggleTodo('${todo._id}')">not done</button>
 					<span onclick="app.controllers.todoController.removeTodo('${todo._id}')" aria-hidden="true">&times;</span>
 				</div>
 			</div>
@@ -65,7 +65,7 @@ function draw(todos) {
 		<div class="card bg-secondary todo-card">
 			<h2 style="text-align: center"><s>${todo.description}</s></h2>
 			<div class="todo-controls">
-				<button class="btn btn-muted" onclick="app.controllers.todoController.toggleTodo('${todo._id}')">done</button>
+				<button class="btn btn-muted" onclick="app.controllers.todoController.toggleTodo('${todo._id}')">not done</button>
 				<span onclick="app.controllers.todoController.removeTodo('${todo._id}')" aria-hidden="true">&times;</span>
 			</div>
 		</div>
