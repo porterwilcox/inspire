@@ -14,7 +14,7 @@ class app {
       greetingController: new GreetingController,
       quoteController: new QuoteController,
       todoController: new TodoController,
-      newsController: new NewsController
+      // newsController: new NewsController
     }
   }
 }

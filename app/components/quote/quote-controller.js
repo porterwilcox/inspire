@@ -22,7 +22,7 @@ function drawQuote(quote) {
 		</div>
 		<div class="collapse-quote collapse" data-parent=".quote-accordion">
 			<div class="card-body quote-body">
-				<div class="quote-text">"${quote.quote}"</div>
+				<div class="quote-text">"${quote.body}"</div>
 			</div>
 		</div>
 	</div>
